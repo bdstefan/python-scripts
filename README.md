@@ -1,1 +1,1 @@
-# python-scripts
+# A simple collection of python scripts.
