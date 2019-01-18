@@ -19,8 +19,8 @@ for key in r.scan_iter("*"):
      idle = r.object("idletime", key)
 
      if r.ttl(key) == -1 and idle > 3600 * 24 * 30 * 6:
-        #r.delete(key)
-        print(key)
+        print("Removed {}".format(key))
+        r.delete(key)
         deleted_keys += 1
 
 if deleted_keys:
