@@ -3,8 +3,8 @@ import os
 
 print("Hello {}!".format(os.environ.get("USER")))
 
-host = raw_input("Give a Redis host (127.0.0.1): ") or "127.0.0.1"
-port = raw_input("Give me its port (6379): ") or "6379"
+host = raw_input("Redis host (127.0.0.1): ") or "127.0.0.1"
+port = raw_input("Redis port (6379): ") or "6379"
 
 try:
     r = redis.StrictRedis(host=host, port=port, db=0)
